@@ -36,14 +36,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
         public void listener2(){
 
-            Button b = findViewById(R.id.BotonCambio);
+            Button b = findViewById(R.id.BotonAct2);
             b.setOnClickListener(new View.OnClickListener() {
 
                 public void onClick(View view) {
 
                     if (b!=null) {
 
-                        Intent intentico = new Intent(view.getContext(), MainActivity.class);
+                        Intent intentico = new Intent();
                         Bundle b = intentico.getExtras();
                         int sum1 = (int) b.getInt("Sum1");
                         int sum2 = (int) b.getInt("Sum2");

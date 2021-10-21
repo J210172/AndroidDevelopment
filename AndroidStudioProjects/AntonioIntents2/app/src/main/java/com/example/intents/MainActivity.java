@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        listener();
+        //listener();
 
     }
 
@@ -29,9 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button b = findViewById(R.id.BotonCambio);
         b.setOnClickListener(new View.OnClickListener() {
-
             public void onClick(View view) {
-
                 ActivityResultLauncher<Intent> ARL = registerForActivityResult(
                         new ActivityResultContracts.StartActivityForResult(),
                         new ActivityResultCallback<ActivityResult>() {
@@ -70,4 +68,40 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void onClick(View view) {
+        ActivityResultLauncher<Intent> arl =
+                registerForActivityResult( new ActivityResultContracts.StartActivityForResult(),
+                        new ActivityResultCallback<ActivityResult>() {
+                            @Override
+                            public void onActivityResult(ActivityResult result) {
+                                if (result.getResultCode() == Activity.RESULT_OK) {
+
+                                    Intent datos = result.getData();
+                                    Bundle b = datos.getExtras();
+                                    if (b != null) {
+                                        int res = (int) b.getInt("resultado");
+                                    }
+                                    Log.d("Resultado", String.valueOf(res));
+
+                                }
+                            }
+                        }
+                );
+
+        Intent cambio = new Intent(view.getContext(), Activity2.class);
+
+        cambio.putExtra("palabra", "Loquesea");
+        cambio.putExtra("numero", 85);
+
+        Persona p = new Persona("Juan", 23, 22222);
+        cambio.putExtra("persona", p);
+
+        cambio.putExtra("Sum1", 20);
+        cambio.putExtra("Sum2", 32);
+
+        arl.launch(cambio);
+
+
+    }
 }
+
