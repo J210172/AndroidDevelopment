@@ -17,7 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
             setContentView(R.layout.activity2);
 
             listener2();
-
+            /*
             Intent intent = getIntent();
             Bundle b = intent.getExtras();
             if (b!=null) {
@@ -30,7 +30,7 @@ import androidx.appcompat.app.AppCompatActivity;
                 Log.d("Datos", String.valueOf(num));
                 Log.d("Datos", per.toString());
 
-            }
+            }*/
 
         }
 
@@ -40,11 +40,12 @@ import androidx.appcompat.app.AppCompatActivity;
             b.setOnClickListener(new View.OnClickListener() {
 
                 public void onClick(View view) {
-
+                    Intent intent = getIntent();
+                    Bundle b = intent.getExtras();
                     if (b!=null) {
 
                         Intent intentico = new Intent();
-                        Bundle b = intentico.getExtras();
+                        Bundle b2 = intentico.getExtras();
                         int sum1 = (int) b.getInt("Sum1");
                         int sum2 = (int) b.getInt("Sum2");
                         int resultado = sum1 + sum2;
