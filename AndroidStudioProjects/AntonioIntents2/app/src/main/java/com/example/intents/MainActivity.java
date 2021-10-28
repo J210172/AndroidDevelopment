@@ -21,8 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        arl =
-                registerForActivityResult( new ActivityResultContracts.StartActivityForResult(),
+        arl = registerForActivityResult( new ActivityResultContracts.StartActivityForResult(),
                         new ActivityResultCallback<ActivityResult>() {
                             @Override
                             public void onActivityResult(ActivityResult result) {

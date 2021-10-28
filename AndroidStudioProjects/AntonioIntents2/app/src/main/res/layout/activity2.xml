@@ -27,9 +27,10 @@
         </TextView>
 
         <Button
+            android:id="@+id/BotonAct2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/BotonAct2">
+            android:onClick="onClick">
 
         </Button>
 
