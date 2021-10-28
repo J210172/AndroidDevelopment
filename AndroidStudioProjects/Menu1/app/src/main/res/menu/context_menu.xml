@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/matar"
+        android:icon="@android:drawable/ic_delete"
+        android:title="@string/matar" />
+
+    <item
+        android:id="@+id/sanar"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="@string/sanar" />
+
+    <item
+        android:id="@+id/enviarmensaje"
+        android:icon="@android:drawable/sym_call_incoming"
+        android:title="@string/enviar_mensaje" />
+</menu>
