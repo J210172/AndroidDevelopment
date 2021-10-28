@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">" Prime Number Calculator"</string>
+    <string name="title">" Prime Number Calculator"</string>
+    <string name="position">Position</string>
+    <string name="description">Enter what prime number
+        you want to calculate. for example, if
+        you want to know the fifth prime
+        number, put number 5 and hit calculate.
+        It will tell you that the
+        5 is the 11</string>
+    <string name="button">Calculate</string>
+    <string name="resultado">The prime number number %d is %d</string>
+</resources>
