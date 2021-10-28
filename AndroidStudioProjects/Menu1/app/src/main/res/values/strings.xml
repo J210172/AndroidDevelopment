@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">Menu 1</string>
+    <string name="app_name">Menu1</string>
+    <string name="matar">Matar</string>
+    <string name="sanar">Sanar</string>
+    <string name="enviar_mensaje">Enviar Mensaje</string>
 </resources>

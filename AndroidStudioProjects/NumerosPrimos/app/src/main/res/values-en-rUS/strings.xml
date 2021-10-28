@@ -11,4 +11,5 @@
         5 is the 11</string>
     <string name="button">Calculate</string>
     <string name="resultado">The prime number number %d is %d</string>
+    <string name="error1">" The position has to start at 0"</string>
 </resources>

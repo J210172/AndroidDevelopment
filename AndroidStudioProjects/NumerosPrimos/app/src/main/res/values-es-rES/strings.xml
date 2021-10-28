@@ -10,4 +10,5 @@
         dirá que el quinto es el 11</string>
     <string name="position">Posicion</string>
     <string name="resultado">El numero primo numero %d es %d</string>
+    <string name="error1">La posicion tiene que empezar en 0</string>
 </resources>

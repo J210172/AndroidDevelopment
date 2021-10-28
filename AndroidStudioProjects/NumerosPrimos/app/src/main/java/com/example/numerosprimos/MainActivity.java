@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_main);
         calcularB = (Button) findViewById(R.id.calcularButton);
         entrada = (EditText) findViewById(R.id.inputPositionN);
         salida = (TextView) findViewById(R.id.outputTV);
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("PrimeNumber", String.valueOf(nPrimo));
                 salida.setText(String.format(getString(R.string.resultado), posicion, nPrimo));
             } else {
-                salida.setText("La posicion tiene que empezar en 0");
+                salida.setText(getString(R.string.error1));
             }
         }
     }
