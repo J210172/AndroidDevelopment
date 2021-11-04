@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         List<Encapsulador> datos = new ArrayList<>();
         reciclador = (RecyclerView) findViewById(R.id.roto);
-        datos.add(new Encapsulador(R.drawable.vim, getString(R.string.def_title), getString(R.string.def_description)));
+        datos.add(new Encapsulador(R.drawable.ic_vlc, getString(R.string.def_title), getString(R.string.def_description)));
         reciclador.setHasFixedSize(true);
         gestor = new LinearLayoutManager(this);
         reciclador.setLayoutManager(gestor);

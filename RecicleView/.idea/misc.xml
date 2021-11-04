@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/DAM2Alu9/git/AndroidDevelopment/RecicleView/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.184375" />
+        <entry key="..\:/Users/DAM2Alu9/git/AndroidDevelopment/RecicleView/app/src/main/res/drawable/ic_atom.xml" value="0.22" />
+        <entry key="..\:/Users/DAM2Alu9/git/AndroidDevelopment/RecicleView/app/src/main/res/drawable/ic_vlc.xml" value="0.184375" />
+        <entry key="..\:/Users/DAM2Alu9/git/AndroidDevelopment/RecicleView/app/src/main/res/drawable/ic_vlc2.xml" value="0.184375" />
         <entry key="..\:/Users/DAM2Alu9/git/AndroidDevelopment/RecicleView/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/DAM2Alu9/git/AndroidDevelopment/RecicleView/app/src/main/res/layout/card_view.xml" value="0.33" />
       </map>

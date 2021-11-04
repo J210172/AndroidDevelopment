@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ListaSQLite</string>
+    <string name="annadir">añadir</string>
+    <string name="eliminar">eliminar</string>
+</resources>
