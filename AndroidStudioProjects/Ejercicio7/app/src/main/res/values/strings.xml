@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Ejercicio7</string>
+    <string name="ajustes">Ajustes</string>
+    <string name="ajuste1">Cambiar color</string>
+    <string name="ajuste2">Cambiar letra</string>
+    <string name="informacion">Información</string>
 </resources>
