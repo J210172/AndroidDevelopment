@@ -5,7 +5,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -17,12 +16,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    private EditText ETGroup, ETDiscos;
+    private EditText ETGroup, ETDisks;
 
     private SQLiteDatabase db;
     private List<Encapsulador> tempDatos;
 
-    private RecyclerView reciclador;
+    private RecyclerView myRecicler;
     private RecyclerView.Adapter adaptador;
     private RecyclerView.LayoutManager gestor;
 
@@ -33,19 +32,19 @@ public class MainActivity extends AppCompatActivity {
 
         tempDatos = new ArrayList<>();
 
-        reciclador = (RecyclerView) findViewById(R.id.RecycleView1);
+        myRecicler = findViewById(R.id.RecycleView1);
 
         tempDatos.add(new Encapsulador("prueGrupo", "prueDisco"));
 
-        reciclador.setHasFixedSize(true);
+        myRecicler.setHasFixedSize(true);
         gestor = new LinearLayoutManager(this);
-        reciclador.setLayoutManager(gestor);
+        myRecicler.setLayoutManager(gestor);
         adaptador = new Adaptador(tempDatos);
-        reciclador.setAdapter(adaptador);
+        myRecicler.setAdapter(adaptador);
 
-        ETGroup = (EditText) findViewById(R.id.ETGroup);
-        ETDiscos = (EditText) findViewById(R.id.ETDiscos);
-        reciclador = (RecyclerView) findViewById(R.id.RecycleView1);
+        ETGroup = findViewById(R.id.ETGroup);
+        ETDisks = findViewById(R.id.ETDiscos);
+        myRecicler = findViewById(R.id.RecycleView1);
 
         db = openOrCreateDatabase("MisDiscos", Context.MODE_PRIVATE, null);
         db.execSQL("CREATE TABLE IF NOT EXISTS MisDiscos(Grupo VARCHAR, Disco VARCHAR);");
@@ -57,30 +56,49 @@ public class MainActivity extends AppCompatActivity {
         tempDatos = new ArrayList<Encapsulador>();
         Cursor c = db.rawQuery("SELECT * FROM MisDiscos", null);
 
-        if (c.getCount() == 0 )
-        {
+        if (c.getCount() == 0) {
             tempDatos.add(new Encapsulador("SinRegistros", "No Hay Resgitros en la base de datos"));
-        }
-        else
-        {
-            while(c.moveToNext())
-            {
+        } else {
+            while (c.moveToNext()) {
                 tempDatos.add(new Encapsulador(c.getString(0), c.getString(1)));
             }
 
         }
         adaptador = new Adaptador(tempDatos);
-        reciclador.setAdapter(adaptador);
+        myRecicler.setAdapter(adaptador);
 
         c.close();
 
     }
 
     public void annadir(View view) {
-        String sentenciaSQL = String.format("INSERT INTO MisDiscos VALUES ('%s','%s')", ETGroup.getText(), ETDiscos.getText());
+
+        String groupText = ETGroup.getText().toString().trim();
+        String disksText = ETDisks.getText().toString().trim();
+        if (!groupText.equals("")) {
+
+        }
+        String sentenciaSQL = String.format("INSERT INTO MisDiscos VALUES ('%s','%s')", ETGroup.getText(), ETDisks.getText());
         db.execSQL(sentenciaSQL);
 
-        Toast.makeText(this, "Se añadió el disco " + ETDiscos.getText().toString(), Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Se añadió el disco " + ETDisks.getText().toString(), Toast.LENGTH_LONG).show();
+
+        actualizar();
+    }
+
+    public void eliminar(View view) {
+        String sentenciaSQL = String.format("DELETE FROM MisDiscos WHERE grupo == '%s' AND disco == '%s'", ETGroup.getText(), ETDisks.getText());
+        db.execSQL(sentenciaSQL);
+        if (!db.inTransaction()) {
+            String table = "";
+            String whereClause = "";
+            String whereArgs[] = {""};
+            db.delete(table,whereClause,whereArgs);
+
+        }
+
+        Toast.makeText(this, "Se elimino el disco " + ETDisks.getText().toString(), Toast.LENGTH_LONG).show();
+
 
         actualizar();
     }
