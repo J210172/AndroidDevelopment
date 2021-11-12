@@ -9,17 +9,24 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Intent iLista;
+    private Intent iLista, iAnnadir;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         iLista = new Intent(this, Lista.class);
+        iAnnadir = new Intent(this, Annadir.class);
         findViewById(R.id.lista).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(iLista);
+            }
+        });
+        findViewById(R.id.annadir).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(iAnnadir);
             }
         });
     }

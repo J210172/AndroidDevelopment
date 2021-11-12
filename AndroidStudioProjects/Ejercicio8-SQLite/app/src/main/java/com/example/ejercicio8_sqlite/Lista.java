@@ -31,8 +31,6 @@ public class Lista extends AppCompatActivity {
 
         myRecicler = findViewById(R.id.recycler);
 
-        tempDatos.add(new Encapsulador("prueGrupo", "prueDisco", R.drawable.ic_vlc));
-
         myRecicler.setHasFixedSize(true);
         gestor = new LinearLayoutManager(this);
         myRecicler.setLayoutManager(gestor);
@@ -43,6 +41,7 @@ public class Lista extends AppCompatActivity {
         db = openOrCreateDatabase("MisDiscos", Context.MODE_PRIVATE, null);
         db.execSQL("CREATE TABLE IF NOT EXISTS MisDiscos(Grupo VARCHAR, Disco VARCHAR);");
 
+        actualizar();
     }
 
     private void actualizar() {

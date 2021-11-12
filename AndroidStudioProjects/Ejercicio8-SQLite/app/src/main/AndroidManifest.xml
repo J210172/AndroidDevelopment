@@ -21,6 +21,9 @@
         <activity
             android:name=".Lista">
         </activity>
+        <activity
+            android:name=".Annadir">
+        </activity>
     </application>
 
 </manifest>

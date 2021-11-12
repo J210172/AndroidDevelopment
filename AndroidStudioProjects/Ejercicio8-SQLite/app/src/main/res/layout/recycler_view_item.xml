@@ -21,14 +21,45 @@
         android:layout_weight="5"
         android:layout_marginLeft="5dp"
         android:stretchColumns="1">
-
         <TableRow>
 
             <TextView
                 android:layout_width="wrap_content"
+                android:textColor="@color/black"
                 android:layout_height="wrap_content"
                 android:textAlignment="textEnd"
+<<<<<<< HEAD
                 android:textSize="20sp"
+                android:textColor="@color/black"
+                tools:text="@string/groupTitle" />
+                tools:text="@string/diskTitle" />
+>>>>>>> 7f827a3c6724dd419a240002e16e40672154b597
+
+            <TextView
+                android:id="@+id/disk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+<<<<<<< HEAD
+                android:textSize="20sp"
+                tools:text="@tools:sample/cities" />
+=======
+                android:textSize="18sp"
+                tools:text="@tools:sample/full_names" />
+>>>>>>> 7f827a3c6724dd419a240002e16e40672154b597
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+<<<<<<< HEAD
+                android:textSize="20sp"
+                android:textColor="@color/black"
+=======
+>>>>>>> 7f827a3c6724dd419a240002e16e40672154b597
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:textSize="18sp"
                 android:textColor="@color/black"
                 tools:text="@string/groupTitle" />
 
@@ -37,27 +68,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:textSize="20sp"
-                tools:text="@tools:sample/cities" />
-        </TableRow>
-
-        <TableRow>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:layout_height="wrap_content"
-                android:textAlignment="textEnd"
-                tools:text="@string/diskTitle" />
-
-            <TextView
-                android:id="@+id/disk"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
+<<<<<<< HEAD
                 android:textSize="20sp"
                 tools:text="@tools:sample/full_names" />
+=======
+                android:textSize="18sp"
+                tools:text="@tools:sample/cities" />
+>>>>>>> 7f827a3c6724dd419a240002e16e40672154b597
         </TableRow>
     </TableLayout>
 </LinearLayout>
