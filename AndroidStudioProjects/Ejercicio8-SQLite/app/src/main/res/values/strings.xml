@@ -3,9 +3,18 @@
     <string name="annadir">Añadir</string>
     <string name="borrar">borrar</string>
     <string name="ver_lista">Ver Lista</string>
-    <string name="base_de_datos_ndicos">Base de datos:\nDiscos</string>
+    <string name="base_de_datos_ndicos">Base de datos:\n</string>
     <string name="image">image</string>
     <string name="groupTitle">Grupo:</string>
     <string name="diskTitle">Disco:</string>
     <string name="exit">exit</string>
+    <string name="delete">delete</string>
+    <string name="Err1">No se permiten campos en blanco</string>
+    <string name="actualizar">Actualizar</string>
+    <string name="updateDone">\"Se ha actualizado el disco: %s del grupo: %s \"</string>
+    <string name="updateFailed">\"El disco: %s del grupo: %s no existe \"</string>
+    <string name="addDone">\"Se ha annadido el disco: %s del grupo: %s \"</string>
+    <string name="addFailed">\"El disco: %s del grupo: %s ya existe \"</string>
+    <string name="deleteDone">\"Se ha borrado el disco: %s del grupo: %s \"</string>
+    <string name="deleteFailed">\"El disco: %s del grupo: %s no existe \"</string>
 </resources>

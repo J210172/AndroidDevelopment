@@ -1,5 +1,6 @@
 package com.example.ejercicio8_sqlite;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,6 +26,8 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.MyHolder> {
         MyHolder mvh = new MyHolder(v);
         return mvh;
     }
+
+
 
     @Override
     public void onBindViewHolder(@NonNull MyHolder holder, int position) {

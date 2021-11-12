@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ejercicio8-SQLite</string>
+    <string name="annadir">Add</string>
+    <string name="borrar">Delete</string>
+    <string name="ver_lista">Show list</string>
+    <string name="base_de_datos_ndicos">DataBase:</string>
+    <string name="image">Image:</string>
+    <string name="groupTitle">Group:</string>
+    <string name="diskTitle">Disk:</string>
+    <string name="exit">exit</string>
+    <string name="delete">delete</string>
+    <string name="Err1">Blank fields are not allowed</string>
+    <string name="actualizar">Update</string>
+    <string name="updateDone">\"Disk has been updated: %s of group: %s\"</string>
+    <string name="updateFailed">" \"Disk: %s in group: %s does not exist\" "</string>
+    <string name="addDone">\"Disk has been added: %s from group: %s\"</string>
+    <string name="addFailed">\"Disk: %s of group: %s already exists\"</string>
+    <string name="deleteDone">\"Disk has been erased: %s from group: %s\"</string>
+    <string name="deleteFailed">"\"Disk: %s in group: %s does not exist\" "</string>
+</resources>

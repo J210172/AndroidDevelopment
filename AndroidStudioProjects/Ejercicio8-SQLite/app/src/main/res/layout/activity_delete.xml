@@ -55,11 +55,11 @@
         android:gravity="center">
 
         <Button
-            android:id="@+id/addButton"
+            android:id="@+id/deleteButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="5dp"
-            android:text="@string/annadir" />
+            android:text="@string/delete" />
 
     </TableRow>
 
@@ -69,11 +69,10 @@
         android:gravity="center">
 
         <Button
-            android:id="@+id/exit"
+            android:id="@+id/exitButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="5dp"
             android:text="@string/exit" />
-
     </TableRow>
 </TableLayout>

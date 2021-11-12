@@ -3,25 +3,28 @@ package com.example.ejercicio8_sqlite;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteStatement;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Annadir extends AppCompatActivity {
+public class Actualizar extends AppCompatActivity {
 
-    private String dbname, tname;
-    private EditText ETGroup, ETDisks;
+    private String dbname, tname, grupo, disco;
+    private TextView ETGroup;
+    private EditText ETDisks;
 
     private SQLiteDatabase db;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add);
+        setContentView(R.layout.activity_update);
         ETDisks = findViewById(R.id.ETDiscos);
         ETGroup = findViewById(R.id.ETGroup);
 
@@ -29,9 +32,12 @@ public class Annadir extends AppCompatActivity {
         if (!b.isEmpty()) {
             dbname = b.getString("dbname");
             tname = b.getString("tname");
+            grupo = b.getString("grupo");
+            disco = b.getString("disco");
         }
-
-        findViewById(R.id.addButton).setOnClickListener(view -> annadir());
+        ETGroup.setText(grupo);
+        ETDisks.setText(disco);
+        findViewById(R.id.updateButton).setOnClickListener(view -> update());
         findViewById(R.id.exit).setOnClickListener(view -> finish());
     }
 
@@ -44,20 +50,16 @@ public class Annadir extends AppCompatActivity {
 
     }
 
-    public void annadir() {
+    public void update() {
         String groupText = ETGroup.getText().toString().trim();
         String disksText = ETDisks.getText().toString().trim();
         if (!groupText.equals("") || !disksText.equals("")) {
-            Cursor c = db.rawQuery(String.format("SELECT * FROM " + tname + " WHERE Grupo = '%s' AND Disco = '%s';", groupText, disksText), null);
-            //hacerlo con db.query
-            if (c.getCount() == 0) {
-                String sentenciaSQL = String.format("INSERT INTO " + tname + " VALUES ('%s','%s')", ETGroup.getText(), ETDisks.getText());
-                //hacerlo con db.insert
-                db.execSQL(sentenciaSQL);
-
-                Toast.makeText(this, String.format(getString(R.string.addDone), disksText, groupText), Toast.LENGTH_LONG).show();
+            SQLiteStatement s =  db.compileStatement(String.format("UPDATE " + tname + " SET Disco = '%s' WHERE Grupo = '%s';", disksText, groupText));
+            int lineas = s.executeUpdateDelete();
+            if (lineas <= 0) {
+                Toast.makeText(this, String.format(getString(R.string.updateFailed), disksText, groupText), Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(this, String.format(getString(R.string.addFailed), disksText, groupText), Toast.LENGTH_LONG).show();
+                Toast.makeText(this, String.format(getString(R.string.updateDone), disksText, groupText), Toast.LENGTH_LONG).show();
             }
         } else {
             Toast.makeText(this, getString(R.string.Err1), Toast.LENGTH_LONG).show();
