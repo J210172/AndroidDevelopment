@@ -39,7 +39,6 @@ public class Lista extends AppCompatActivity {
         adaptador = new Adaptador(tempDatos);
         myRecicler.setAdapter(adaptador);
 
-        myRecicler = findViewById(R.id.recycler);
 
         db = openOrCreateDatabase("MisDiscos", Context.MODE_PRIVATE, null);
         db.execSQL("CREATE TABLE IF NOT EXISTS MisDiscos(Grupo VARCHAR, Disco VARCHAR);");

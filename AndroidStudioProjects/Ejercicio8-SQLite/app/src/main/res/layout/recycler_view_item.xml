@@ -28,7 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAlignment="textEnd"
-                android:textSize="10sp"
+                android:textSize="20sp"
                 android:textColor="@color/black"
                 tools:text="@string/groupTitle" />
 
@@ -37,7 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:textSize="10sp"
+                android:textSize="20sp"
                 tools:text="@tools:sample/cities" />
         </TableRow>
 
@@ -45,7 +45,7 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:textSize="10sp"
+                android:textSize="20sp"
                 android:textColor="@color/black"
                 android:layout_height="wrap_content"
                 android:textAlignment="textEnd"
@@ -56,7 +56,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:textSize="10sp"
+                android:textSize="20sp"
                 tools:text="@tools:sample/full_names" />
         </TableRow>
     </TableLayout>
