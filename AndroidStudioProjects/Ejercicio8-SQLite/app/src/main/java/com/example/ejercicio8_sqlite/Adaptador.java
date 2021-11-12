@@ -30,6 +30,7 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.MyHolder> {
     public void onBindViewHolder(@NonNull MyHolder holder, int position) {
         holder.tvGroup.setText(entradas.get(position).getGroup());
         holder.tvDisk.setText(entradas.get(position).getDisk());
+        holder.imageView.setImageResource(entradas.get(position).getIdImage());
     }
 
     @Override

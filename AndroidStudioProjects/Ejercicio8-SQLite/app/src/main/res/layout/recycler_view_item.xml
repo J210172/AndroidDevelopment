@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
     android:gravity="center"
-    android:padding="5dp"
-    android:id="@+id/item">
+    android:padding="5dp">
 
     <ImageView
         android:id="@+id/image"
@@ -14,32 +13,51 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:contentDescription="@string/image"
-        tools:srcCompat="@tools:sample/avatars[1]" />
+        tools:srcCompat="@tools:sample/backgrounds/scenic[1]" />
 
     <TableLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="5"
+        android:layout_marginLeft="5dp"
         android:stretchColumns="1">
 
         <TableRow>
 
             <TextView
-                android:id="@+id/group"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAlignment="textEnd"
+                android:textSize="10sp"
+                android:textColor="@color/black"
                 tools:text="@string/groupTitle" />
+
+            <TextView
+                android:id="@+id/group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                tools:text="@tools:sample/cities" />
         </TableRow>
 
         <TableRow>
 
             <TextView
-                android:id="@+id/disk"
                 android:layout_width="wrap_content"
+                android:textSize="10sp"
+                android:textColor="@color/black"
                 android:layout_height="wrap_content"
                 android:textAlignment="textEnd"
                 tools:text="@string/diskTitle" />
+
+            <TextView
+                android:id="@+id/disk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                tools:text="@tools:sample/full_names" />
         </TableRow>
     </TableLayout>
 </LinearLayout>

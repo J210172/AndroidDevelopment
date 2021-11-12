@@ -3,10 +3,12 @@ package com.example.ejercicio8_sqlite;
 public class Encapsulador {
     public String group;
     public String disk;
+    public int idImage;
 
-    public Encapsulador(String group, String disk) {
+    public Encapsulador(String group, String disk, int idImage) {
         this.group = group;
         this.disk = disk;
+        this.idImage = idImage;
     }
 
     public String getGroup() {
@@ -25,4 +27,11 @@ public class Encapsulador {
         this.disk = disk;
     }
 
+    public int getIdImage() {
+        return idImage;
+    }
+
+    public void setIdImage(int idImage) {
+        this.idImage = idImage;
+    }
 }
