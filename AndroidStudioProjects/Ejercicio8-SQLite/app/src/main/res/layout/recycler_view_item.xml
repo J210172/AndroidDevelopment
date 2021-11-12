@@ -21,31 +21,11 @@
         android:layout_weight="5"
         android:layout_marginLeft="5dp"
         android:stretchColumns="1">
-
         <TableRow>
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAlignment="textEnd"
-                android:textSize="10sp"
-                android:textColor="@color/black"
-                tools:text="@string/groupTitle" />
-
-            <TextView
-                android:id="@+id/group"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textSize="10sp"
-                tools:text="@tools:sample/cities" />
-        </TableRow>
-
-        <TableRow>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:textSize="10sp"
+                android:textSize="18sp"
                 android:textColor="@color/black"
                 android:layout_height="wrap_content"
                 android:textAlignment="textEnd"
@@ -56,8 +36,26 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:textSize="10sp"
+                android:textSize="18sp"
                 tools:text="@tools:sample/full_names" />
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                tools:text="@string/groupTitle" />
+
+            <TextView
+                android:id="@+id/group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                tools:text="@tools:sample/cities" />
         </TableRow>
     </TableLayout>
 </LinearLayout>

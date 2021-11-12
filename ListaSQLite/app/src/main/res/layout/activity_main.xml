@@ -8,12 +8,7 @@
     android:padding="10dp"
     tools:context=".MainActivity">
 
-<<<<<<< HEAD
-    <LinearLayout
-        android:minHeight="200dp"
-=======
     <TableLayout
->>>>>>> 01340a27f4190d6323df90d8ce4d50dfffcb694e
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1">

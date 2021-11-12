@@ -37,8 +37,8 @@
         android:textSize="20sp"
         android:layout_weight="1"/>
     <Button
-        android:id="@+id/añadir"
-        android:text="@string/a_adir"
+        android:id="@+id/annadir"
+        android:text="@string/annadir"
         android:textSize="20sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
