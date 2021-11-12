@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Ejercicio8-SQLite</string>
+    <string name="a_adir">Añadir</string>
+    <string name="borrar">borrar</string>
+    <string name="ver_lista">Ver Lista</string>
+    <string name="base_de_datos_ndicos">Base de datos:\nDiscos</string>
+    <string name="image">image</string>
+    <string name="groupTitle">Grupo:</string>
+    <string name="diskTitle">Disco:</string>
+</resources>
