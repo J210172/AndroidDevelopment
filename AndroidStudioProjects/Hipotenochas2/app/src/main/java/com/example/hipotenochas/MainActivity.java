@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
                         ib.setOnClickListener(this::squareAction);
                         minefield[i][j] = -1;
                         nRmines+=1;*/
-                    } else {
+                    } else if (ib.getDrawable() == facing_down) {
                         showDefeat();
                         revealAllSquares();
                     } /*else {
