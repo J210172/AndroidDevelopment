@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Hipotenochas</string>
+    <string name="gameTitle">Hipotenochas</string>
+    <string name="playButton">Play</string>
+    <string name="customDifficulty">Custom</string>
+    <string name="hardDifficulty">Hard</string>
+    <string name="normalDifficulty">Normal</string>
+    <string name="easyDifficulty">Easy</string>
+</resources>
