@@ -68,15 +68,15 @@ public class MainActivity extends AppCompatActivity {
                         ib.setOnClickListener(this::squareLongAction);
                         minefield[i][j] = -2;
                         nRmines-=1;
-                    } else if (minefield[i][j] == -2) {
+                    /*} else if (minefield[i][j] == -2) {
                         ib.setImageResource(R.drawable.facing_down);
                         ib.setOnClickListener(this::squareAction);
                         minefield[i][j] = -1;
-                        nRmines+=1;
+                        nRmines+=1;*/
                     } else {
                         showDefeat();
                         revealAllSquares();
-                    }/*else {
+                    } /*else {
                         if (ib.getDrawable() == facing_down) {
                             ib.setImageResource(R.drawable.flagged);
                         } else {
@@ -189,7 +189,7 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < nmines; i++) {
             int r1 = (int) (Math.random() * y);
             int r2 = (int) (Math.random() * x);
-            if (r1 + r2 * x != id) {
+            if (r1 + r2 * x != id && minefield[r1][r2] != -1) {
                 minefield[r1][r2] = -1;
             } else {
                 i--;
