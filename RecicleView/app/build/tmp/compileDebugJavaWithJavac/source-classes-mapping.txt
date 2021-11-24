@@ -1,0 +1,9 @@
+com/example/recicleview/BuildConfig.java
+ com.example.recicleview.BuildConfig
+com/example/recicleview/MainActivity.java
+ com.example.recicleview.MainActivity
+com/example/recicleview/Encapsulador.java
+ com.example.recicleview.Encapsulador
+com/example/recicleview/Adaptador.java
+ com.example.recicleview.Adaptador
+ com.example.recicleview.Adaptador$MyHolder

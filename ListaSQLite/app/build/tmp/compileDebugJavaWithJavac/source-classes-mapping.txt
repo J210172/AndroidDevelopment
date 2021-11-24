@@ -1,0 +1,9 @@
+com/example/listasqlite/Encapsulador.java
+ com.example.listasqlite.Encapsulador
+com/example/listasqlite/Adaptador.java
+ com.example.listasqlite.Adaptador
+ com.example.listasqlite.Adaptador$MyHolder
+com/example/listasqlite/MainActivity.java
+ com.example.listasqlite.MainActivity
+com/example/listasqlite/BuildConfig.java
+ com.example.listasqlite.BuildConfig
