@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.Menu;
@@ -16,10 +17,11 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private TableLayout gameTable;
-    private int y, x, nmines, tempx, tempy;
+    private int y, x, nmines, nRmines, tempx, tempy;
     private int minefield[][];
     private ImageButton imageButtons[][];
     private String[] options;
+    private Drawable facing_down;
     private boolean firstTimeSquareAction, firstTimeRevealAllEmptySquares;
 
     @Override
@@ -28,11 +30,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.game_layout);
         gameTable = findViewById(R.id.gameTable);
         options = new String[] {"Easy", "Normal", "Hard"};
+        facing_down = getDrawable(R.drawable.facing_down);
         firstTimeSquareAction = true;
         firstTimeRevealAllEmptySquares = true;
         x = 8;
         y = 8;
         nmines = 10;
+        nRmines = nmines;
     }
 
     public void squareAction(View v) {
@@ -43,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         }
         int val = getSquareValue(v.getId());
         if (val == -1) {
-            Toast.makeText(getApplicationContext(), "Has perdido", Toast.LENGTH_LONG).show();
+            showDefeat();
             revealAllSquares();
         } else {
             changeImage(ib, val);
@@ -52,27 +56,40 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean squareLongAction(View v) {
         ImageButton ib = (ImageButton) v;
+        if (firstTimeSquareAction) {
+            generateMineField(v.getId());
+            firstTimeSquareAction = false;
+        }
         for (int i = 0; i < y; i++) {
             for (int j = 0; j < x; j++) {
                 if (v.getId() == j + i * x) {
                     if (minefield[i][j] == -1) {
                         ib.setImageResource(R.drawable.flagged);
-                        ib.setEnabled(false);
+                        ib.setOnClickListener(this::squareLongAction);
                         minefield[i][j] = -2;
-                        nmines-=1;
+                        nRmines-=1;
                     } else if (minefield[i][j] == -2) {
-                        ib.setImageResource(R.drawable.bomb);
-                        ib.setEnabled(true);
+                        ib.setImageResource(R.drawable.facing_down);
+                        ib.setOnClickListener(this::squareAction);
                         minefield[i][j] = -1;
-                        nmines+=1;
-                    }
+                        nRmines+=1;
+                    } else {
+                        showDefeat();
+                        revealAllSquares();
+                    }/*else {
+                        if (ib.getDrawable() == facing_down) {
+                            ib.setImageResource(R.drawable.flagged);
+                        } else {
+                            ib.setImageDrawable(facing_down);
+                        }
+                    }*/
                     break;
                 }
             }
         }
 
-        if (nmines == 0) {
-            Toast.makeText(getApplicationContext(), "Has Ganado", Toast.LENGTH_LONG).show();
+        if (nRmines == 0) {
+            showWin();
         }
         return true;
     }
@@ -174,6 +191,8 @@ public class MainActivity extends AppCompatActivity {
             int r2 = (int) (Math.random() * x);
             if (r1 + r2 * x != id) {
                 minefield[r1][r2] = -1;
+            } else {
+                i--;
             }
         }
 
@@ -207,7 +226,7 @@ public class MainActivity extends AppCompatActivity {
                 ib.setMaxWidth(1050 / x);
                 ib.setId(j + i * x);
                 ib.setPadding(3, 3, 3, 3);
-                ib.setImageResource(R.drawable.facing_down);
+                ib.setImageDrawable(facing_down);
                 ib.setOnClickListener(this::squareAction);
                 ib.setOnLongClickListener(this::squareLongAction);
                 tr.addView(ib);
@@ -229,6 +248,7 @@ public class MainActivity extends AppCompatActivity {
             generateTable();
             firstTimeSquareAction = true;
             firstTimeRevealAllEmptySquares = true;
+            nRmines = nmines;
             return true;
         });
         menu.add(R.string.configurationOpt).setOnMenuItemClickListener(micl -> {
@@ -277,6 +297,24 @@ public class MainActivity extends AppCompatActivity {
         alert.setTitle("How to play");
         alert.setMessage("CONDICIÓN DE VICTORIA: El usuario gana cuando ha ocurrido la situación 2 y ha marcado correctamente todas las hipotenochas.\n" +
                 "CONDICIÓN DE DERROTA: El usuario pierde cuando ha ocurrido la situación 1 o la situación 3.\n");
+        AlertDialog dialog = alert.create();
+        dialog.show();
+    }
+
+    public void showWin() {
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setNeutralButton("Ok", (DialogInterface dialogInterface, int i) -> {});
+        alert.setTitle("Yo win");
+        alert.setMessage("Yo win");
+        AlertDialog dialog = alert.create();
+        dialog.show();
+    }
+
+    public void showDefeat() {
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setNeutralButton("Ok", (DialogInterface dialogInterface, int i) -> {});
+        alert.setTitle("You lost");
+        alert.setMessage("You lost");
         AlertDialog dialog = alert.create();
         dialog.show();
     }
