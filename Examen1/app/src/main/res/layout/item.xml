@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:contentDescription="@string/image"
+        tools:srcCompat="@tools:sample/backgrounds/scenic[1]" />
+
+<TableLayout
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="5"
+    android:stretchColumns="1">
+    <TableRow>
+        <TextView
+            android:layout_marginHorizontal="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:text="@string/idTitle" />
+
+        <TextView
+            android:id="@+id/idTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:text="@tools:sample/cities" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_marginHorizontal="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:text="@string/nombreTitle" />
+
+        <TextView
+            android:id="@+id/nameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:text="@tools:sample/full_names" />
+    </TableRow>
+</TableLayout>
+</LinearLayout>
