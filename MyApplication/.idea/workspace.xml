@@ -9,82 +9,13 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3b5acd6-55e8-4b2b-b2f1-b524ebe9a8cf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/app/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/app/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/app/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/app/src/androidTest/java/com/example/listasqlite/ExampleInstrumentedTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/app/src/main/java/com/example/listasqlite/Adaptador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/app/src/main/java/com/example/listasqlite/Encapsulador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/app/src/main/java/com/example/listasqlite/MainActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/app/src/main/res/layout/card.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/app/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/app/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/app/src/main/res/values-night/themes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/app/src/main/res/values/themes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/app/src/test/java/com/example/listasqlite/ExampleUnitTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ListaSQLite/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/UsuariosSQLiteHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../RecicleView/app/src/main/res/drawable/ic_atom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../RecicleView/app/src/main/res/drawable/ic_vlc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RecicleView/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RecicleView/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RecicleView/app/src/main/java/com/example/recicleview/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RecicleView/app/src/main/java/com/example/recicleview/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RecicleView/app/src/main/res/drawable-v24/atom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RecicleView/app/src/main/res/drawable-v24/burpsuite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RecicleView/app/src/main/res/drawable-v24/calc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RecicleView/app/src/main/res/drawable-v24/calligrakrita.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RecicleView/app/src/main/res/drawable-v24/cheese.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RecicleView/app/src/main/res/drawable-v24/chrome.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RecicleView/app/src/main/res/drawable-v24/codeblocks.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RecicleView/app/src/main/res/drawable-v24/deluge.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RecicleView/app/src/main/res/drawable-v24/dosbox.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RecicleView/app/src/main/res/drawable-v24/eog.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RecicleView/app/src/main/res/drawable-v24/filemanager.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RecicleView/app/src/main/res/drawable-v24/filezilla.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RecicleView/app/src/main/res/drawable-v24/firefox.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RecicleView/app/src/main/res/drawable-v24/unitytweaktool.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RecicleView/app/src/main/res/drawable-v24/utilitiessystemmonitor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RecicleView/app/src/main/res/drawable-v24/vbox.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RecicleView/app/src/main/res/drawable-v24/vim.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RecicleView/app/src/main/res/drawable-v24/visualstudio.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RecicleView/app/src/main/res/drawable-v24/vlc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RecicleView/app/src/main/res/drawable-v24/vmwareworkstation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RecicleView/app/src/main/res/drawable-v24/wireshark.png" beforeDir="false" />
-    </list>
+    <list default="true" id="b3b5acd6-55e8-4b2b-b2f1-b524ebe9a8cf" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\DAM2Alu9\.android\avd\Pixel_5_API_30.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\jaime\.android\avd\Pixel_4_API_30.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -111,6 +42,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../AndroidStudioProjects/MapPru" />
   </component>
   <component name="RunManager">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
@@ -193,5 +125,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

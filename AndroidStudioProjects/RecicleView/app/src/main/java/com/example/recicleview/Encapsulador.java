@@ -9,8 +9,6 @@ public class Encapsulador {
         this.idImagen = idImagen;
         this.textoTitulo = textoTitulo;
         this.textoContenido = textoContenido;
-
-        C
     }
 
     public int getIdImagen() {
